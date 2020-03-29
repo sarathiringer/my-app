@@ -8,7 +8,7 @@ class Progress extends Component {
     }
     render() {
         return (
-            <div className="Progress Bar">
+            <div className="ProgressBar">
                 <div
                     className="Progress"
                     style={{ width: this.props.progress + '%' }}

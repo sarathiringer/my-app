@@ -5,7 +5,7 @@
     flex-direction: column;
     flex: 1;
     align-items: flex-start;
-    text_align: left;
+    text-align: left;
     overflow: hidden;
 }
 

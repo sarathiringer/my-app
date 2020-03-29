@@ -35,7 +35,7 @@ class Upload extends Component {
                     <img
                         className="CheckIcon"
                         alt="done"
-                        src="%.jpg"
+                        src="percentage.jpg"
                         style={{
                             opacity:
                                 uploadProgress && uploadProgress.state === "done" ? 0.5 : 0
