@@ -1,9 +1,9 @@
 
 const IncomingForm = require('formidable').IncomingForm
 const fs = require('fs');
-const cleaningText = require('./utils/processing.js');
-const findTopWord = require('./utils/processing.js');
-const getProcessedText = require('./utils/processing.js');
+const { cleaningText } = require('./utils/processing.js');
+const { findTopWord } = require('./utils/processing.js');
+const { getProcessedText } = require('./utils/processing.js');
 
 
 module.exports = function upload(req, res) {
@@ -39,6 +39,8 @@ form.on('file', (field, file) => {
     
     
     console.log(processed_text);
+
+    res.send(processed_text);
 
 })
 
