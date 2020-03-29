@@ -1,7 +1,9 @@
 
 const IncomingForm = require('formidable').IncomingForm
 const fs = require('fs');
-const { cleaningText, findTopWord, getProcessedText } = require('./utils/processing.js')
+const cleaningText = require('./utils/processing.js');
+const findTopWord = require('./utils/processing.js');
+const getProcessedText = require('./utils/processing.js');
 
 
 module.exports = function upload(req, res) {
