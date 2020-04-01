@@ -66,3 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Description
+
+The aim for the web application is for the user to upload a text file of some sort. Then, the app shall find the most frequent word in that text and wrap it in "foo" and "bar". The processed text should be displayed to the user.
