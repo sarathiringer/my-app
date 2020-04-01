@@ -5,6 +5,7 @@ import Dropzone from './Components/Dropzone/Dropzone.js';
 import './App.css';
 import Upload from './Components/Upload/upload.js';
 import Progress from './Components/Progress/Progress.js';
+import Display from './Components/Display/display.js';
 
 const HelloPerson = lazy(() => import('./Components/HelloPerson.js'))
 
@@ -14,8 +15,9 @@ class App extends Component {
             <div className="App">
                 <div className="Card">
                     <Upload />
-                    <Progress />
-                    <Dropzone />
+                </div>
+                <div className="Displau">
+                    <Display />
                 </div>
             </div>
         )
