@@ -6,7 +6,6 @@ var processing = require('./utils/processing.js');
 module.exports = function upload(req, res) {
 
 const form = new IncomingForm()
-
 let processed_text;
 
 
@@ -50,11 +49,8 @@ form.on('file', (field, file) => {
 
 
 form.on('end', () => {
-    
-    
-    res.json()
-    
-    
+    res.json();
+ 
 })
 
 form.parse(req)
