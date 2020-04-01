@@ -7,6 +7,8 @@ module.exports = function upload(req, res) {
 
 const form = new IncomingForm()
 
+let processed_text;
+
 
 form.on('file', (field, file) => {
     // Get text from the file object
@@ -37,7 +39,8 @@ form.on('file', (field, file) => {
     original_text_array = processing.getProcessedText(top_word, original_text_array)
 
     // Turn back to string
-    let processed_text = original_text_array.join(" ");
+    processed_text = original_text_array.join(" ");
+    console.log(processed_text);
 
     // Send to front-end
     res.send(processed_text);
@@ -47,7 +50,11 @@ form.on('file', (field, file) => {
 
 
 form.on('end', () => {
+    
+    
     res.json()
+    
+    
 })
 
 form.parse(req)

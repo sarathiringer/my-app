@@ -120,7 +120,8 @@ class Upload extends Component {
             req.open("POST", "http://localhost:8000/upload");
             req.send(formData);
 
-            req.onload = () => {console.log(req.response)};
+            req.onload = () => {console.log(req.response)}
+            // console.log(req.onreadystatechange = () => {console.log(req.responseText)});
         });
     }
 
