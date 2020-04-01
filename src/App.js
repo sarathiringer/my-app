@@ -1,13 +1,11 @@
 
-import logo from './logo.svg';
-import React,{ lazy, Suspense, Component } from 'react';
-import Dropzone from './Components/Dropzone/Dropzone.js';
+
+import React,{ Component } from 'react';
 import './App.css';
 import Upload from './Components/Upload/upload.js';
-import Progress from './Components/Progress/Progress.js';
+import Progress from './Components/Progress/Progress.js'; // Never used simply because I didn't get it to work very well. 
 import Display from './Components/Display/display.js';
 
-const HelloPerson = lazy(() => import('./Components/HelloPerson.js'))
 
 class App extends Component {
     render() {
@@ -23,26 +21,6 @@ class App extends Component {
         )
     }
 }
-
-/*
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Suspense fallback={<div>Loading...</div>}>
-            <HelloPerson></HelloPerson>
-        </Suspense>
-        {<HelloPerson name="Sara"/>}
-      </header>
-    </div>
-  );
-
-
-
-}
-
-*/
 
 
 export default App;

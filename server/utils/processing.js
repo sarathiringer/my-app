@@ -4,12 +4,10 @@ const cleaningText = (data) => {
     data = data.replace(",", "");
     data = data.replace(".", "");
     data = data.replace("\\n", "");
-
-    /* for (i = 0; i < 20; i++){
-        data = data.replace("\\n".concat(i), "");
-    }; */
-
     data = data.toLowerCase();
+
+    // If I had spent more time, I would have developed this to also deal better with for example numbered lists and such.
+
     return data;
 }
 

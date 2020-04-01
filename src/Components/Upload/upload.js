@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dropzone from '../Dropzone/Dropzone.js';
-import Progress from '../Progress/Progress';
+import Progress from '../Progress/Progress'; 
 import './upload.css';
 
 
@@ -62,7 +62,7 @@ class Upload extends Component {
                     disabled={this.state.files.length < 0 || this.state.uploading}
                     onClick={this.uploadFiles}
                 >
-                    Ladda upp
+                    Upload
                 </button>
             );
         }
@@ -77,7 +77,7 @@ class Upload extends Component {
             await Promise.all(promises);
             this.setState({successfulUploaded: true, uploading: false });
         } catch (e) {
-            // Insert better error handling
+            // This is were you put better error handling :)
             this.setState({ successfulUploaded: true, uploading: false });
         }
     }
@@ -120,7 +120,7 @@ class Upload extends Component {
             req.open("POST", "http://localhost:8000/upload");
             req.send(formData);
 
-            // Different attempts on getting the response:
+            // Different attempts on getting the response
             // req.onload = () => {console.log("funkar")};
             // req.onload = () => {console.log(req.response)}
             // console.log(req.onreadystatechange = () => {console.log(req.responseText)});
