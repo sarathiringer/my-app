@@ -16,7 +16,7 @@ class App extends Component {
                 <div className="Card">
                     <Upload />
                 </div>
-                <div className="Displau">
+                <div className="Display">
                     <Display />
                 </div>
             </div>
