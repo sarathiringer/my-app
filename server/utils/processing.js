@@ -5,9 +5,9 @@ const cleaningText = (data) => {
     data = data.replace(".", "");
     data = data.replace("\\n", "");
 
-    for (i = 0; i < 20; i++){
+    /* for (i = 0; i < 20; i++){
         data = data.replace("\\n".concat(i), "");
-    };
+    }; */
 
     data = data.toLowerCase();
     return data;
@@ -45,7 +45,7 @@ const getProcessedText = (top_word, original_text_array) => {
             original_text_array[i] = foobar;
         } else if (original_text_array[i] === top_word.concat(",")){
             original_text_array[i] = foobar.concat(",");
-        } else if (original_text_array[i] === top_word.concate(".")){
+        } else if (original_text_array[i] === top_word.concat(".")){
             original_text_array[i] = foobar.concat(".");
         } else if (original_text_array[i].includes("\\n") && original_text_array[i].includes(top_word)){
             let nr = original_text_array[i].slice(-1);
@@ -54,7 +54,7 @@ const getProcessedText = (top_word, original_text_array) => {
             original_text_array[i] = foobar;
         } else if (original_text_array[i] === top_word_capital.concat(",")){
             original_text_array[i] = foobar.concat(",");
-        } else if (original_text_array[i] === top_word_capital.concate(".")){
+        } else if (original_text_array[i] === top_word_capital.concat(".")){
             original_text_array[i] = foobar.concat(".");
         } else if (original_text_array[i].includes("\\n") && original_text_array[i].includes(top_word_capital)){
             let nr = original_text_array[i].slice(-1);
@@ -64,4 +64,6 @@ const getProcessedText = (top_word, original_text_array) => {
 
     return original_text_array;
 
-};
+}
+
+module.exports={ cleaningText, findTopWord, getProcessedText };
